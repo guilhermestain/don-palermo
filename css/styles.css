@@ -1,0 +1,443 @@
+body {
+  /* font-family: "Montserrat Alternates", sans-serif; */
+  background-image: url("fundo.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#logodp {
+  height: 90px;
+  margin-top: -35px;
+  position: absolute;
+  left: 46%;
+}
+
+#navbar1 {
+  background: rgba(0, 0, 0, 0.7);
+  border-color: white;
+  border: 2px solid #ffffff;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px;
+  margin-top: 30;
+  height: 52px;
+}
+
+.active {
+  background-color: white;
+}
+
+#pizza {
+  height: 100px;
+  margin-top: -36px;
+  position: absolute;
+  left: 20%;
+}
+
+.produto {
+  margin-top: 20px;
+  /* font-family: "Exo", sans-serif; */
+  color: #fff;
+}
+
+.produto .produto-img {
+  height: 175px;
+  width: 175px;
+}
+
+.preco {
+  /* font-family: "Do Hyeon", sans-serif; */
+  margin-top: -12px;
+  font-size: 50;
+  grid-row: bold;
+}
+
+.jumbotron {
+  margin-top: -20px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.carousel-indicators {
+  bottom: 0;
+}
+
+#BC1 {
+  background-color: Green;
+}
+
+#BC2 {
+  background-color: White;
+}
+
+#BC3 {
+  background-color: Red;
+}
+
+.carousel-indicators li {
+  border-color: #222;
+}
+
+.index-social {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.index-link h3 {
+  text-align: center;
+  color: #f1f1f1;
+  text-align: left;
+}
+.index-link {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #ffffff;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+/* Footer da Area da pizza */
+
+.index-socialP {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.index-linkP h3 {
+  text-align: center;
+  color: #f1f1f1;
+  text-align: left;
+}
+.index-linkP {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #ffffff;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+/* Footer da Area de Bebidas e AC */
+
+.index-socialB {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.index-linkB h3 {
+  text-align: center;
+  color: #f1f1f1;
+  text-align: left;
+}
+
+.index-linkB {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #ffffff;
+  border-left: 0px;
+  border-right: 0px;
+  position: absolute;
+  top: 90.5%;
+  width: 100%;
+}
+
+.copy-c {
+  padding-top: 10px;
+}
+.link-area {
+  text-align: center;
+  margin-top: -3px;
+}mt-4
+#link-area1 {
+  text-align: center;
+}
+#maparea {
+  margin-left: 230px;
+  margin-top: 50px;
+}
+#tituloS {
+  text-align: center;
+  margin-right: 90px;
+}
+
+#paraS {
+  margin-left: 300px;
+}
+
+#tituloS2 {
+  text-align: center;
+  margin-right: 0px;
+}
+#pizzastitulo {
+  font-family: "Exo", sans-serif;
+  margin-top: -4px;
+}
+
+
+#bt {
+  margin-top: 0px;
+}
+#bh {
+  margin-left: 85px;
+  border: 2px solid #ffd700;
+  border-radius: 15px;
+}
+.carousel-inner {
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.footer {
+  margin-top: 20px; 
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #ffffff;
+  border-left: 0px;
+  border-right: 0px;
+}
+#BH1 {
+  border: 2px solid #62a5e3;
+  border-radius: 15px;
+}
+
+#BH2 {
+  margin-left: 10px;
+  border: 2px solid #62a5e3;
+  border-radius: 15px;
+}
+
+#BH3 {
+  margin-top: 10px;
+  border: 2px solid #62a5e3;
+  border-radius: 15px;
+}
+
+#BH4 {
+  margin-top: 10px;
+  border: 2px solid #62a5e3;
+  margin-left: 10px;
+  border-radius: 15px;
+}
+#acf {
+  /* font-family: "Righteous", cursive; */
+  margin-top: 40px;
+}
+#formac {
+  border-radius: 10px;
+}
+#btac {
+  border: 2px solid White;
+  border-radius: 10px;
+  height: 45;
+  width: 95;
+  margin-top: -20px;
+}
+#act {
+  margin-left: 30px;
+}
+#btcad {
+  border: 2px solid White;
+  border-radius: 10px;
+  height: 45;
+  width: 95;
+  margin-left: 85px;
+}
+#formcad {
+  margin-left: 50px;
+}
+#cep {
+  border-radius: 10px;
+}
+#rua {
+  border-radius: 10px;
+}
+#bairro {
+  border-radius: 10px;
+}
+#cidade {
+  border-radius: 10px;
+}
+#uf {
+  border-radius: 10px;
+}
+
+
+.form-login-content {
+  color: #fff;
+  width: 300px;
+  margin: 10% auto;
+  height: calc( 60vh - 10%);
+}
+
+.form-login-content label {
+  display: block;
+  margin-top: 20px; 
+}
+
+.form-login-content .form-login input {
+  border-radius: 20px;
+  padding: 6px;
+  width: 100%;
+  color: #666;
+}
+
+.form-login-content .form-login input:focus {
+  outline: none;
+}
+
+.form-button a {
+  margin-top: 30px;
+  display: block;
+  padding: 6px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.form-cadastro {
+  color: white;
+  margin: 10px auto;
+  width: 80%;
+}
+
+
+.form-cadastro label {
+  display: block;
+}
+
+
+.form-cadastro-input {
+  margin-top: 10px;
+}
+
+
+.form-cadastro-input input {
+  border-radius: 20px;
+  padding: 6px;
+  width: 100%;
+  color: #000;
+}
+
+.form-cadastro-input input:focus {
+  outline: none;
+  color: rgb(46, 46, 46);
+}
+
+a.sub-title-form {
+  color: #969696;
+}
+
+.sub-title-form:hover {
+  color: #c7c7c7;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-red {
+  color: red;
+}
+
+button.button-new-user {
+  background: transparent;
+  border: none;
+  padding-top: 20px;
+}
+
+
+button:focus,
+button:active {
+  outline: none !important;
+}
+
+@media screen and (max-width: 780px) {
+  .carousel-inner {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #bh {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .jumbotron {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #pizza {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #logodp {
+    position: absolute;
+    left: 42%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #footertext {
+    font-size: 0px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .index-social {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .index-link {
+    height: 65px;
+    position: absolute;
+    width: 100%;
+    top: 90%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #link-area1 {
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #caixamap {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .index-socialB {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .index-linkB {
+    height: 65px;
+    position: absolute;
+    width: 100%;
+    top: 90%;
+  }
+}
