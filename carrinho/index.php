@@ -1,3 +1,12 @@
+<?php 
+  session_start();
+
+  if(!isset($_SESSION['nome'])) {
+    header('Location: ../403/');
+  }
+
+?>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -26,29 +35,14 @@
 
 	<div class="container">
 
-    <!-- barra de navegação -->
-		<nav id="navbar1" class="navbar navbar-default">
-      <div class="navbar-header">
-        <a href="../index.html" class="navbar-brand"><img id="logodp" src="../img/logo.png"></a>
-        <a href="../index.html" class="navbar-brand"><img id="pizza" src="../img/pizzaria.png"></a>
-        <button class="navbar-toggle glyphicon glyphicon-menu-hamburger" data-toggle="collapse" data-target="#barra"></button>
-      </div>
-
-      <ul id="barra" class="nav navbar-nav navbar-right navbar-collapse">
-        <li ><a href="../index.html" id="nome1"><font color="green">Home</font></a></li>
-        <li ><a href="../pizzas/index.html" id="nome2"><font color="green">Pizzas</font></a></li>
-        <li ><a href="../bebidas/index.html" id="nome2"><font color="green">Bebidas</font></a></li>
-        <li ><a href="../login/index.html" id="nome2"><font color="red">Área do Cliente</font></a></li>
-        <li ><a href="../sobre/index.html" id="nome2"><font color="red">Sobre</font></a></li>
-      </ul>
-    </nav>
-    <!-- barra de navegação -->
+  
 
    <!-- compra conteudo -->
-    <div class="row">
-      
-    </div>
-
+   <div class="row">
+   <h1>
+     <font color="white">Pedidos</font>
+   </h1>
+ </div>
     <!-- compra conteudo -->
 
     
