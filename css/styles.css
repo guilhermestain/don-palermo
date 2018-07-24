@@ -46,6 +46,9 @@ body {
   width: 175px;
 }
 
+.status-code {
+  height: 50vh;
+}
 .preco {
   /* font-family: "Do Hyeon", sans-serif; */
   margin-top: -12px;
