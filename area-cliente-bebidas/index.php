@@ -1,5 +1,6 @@
 <?php 
   session_start();
+  require_once('../php/products/bebida.php');
 
   if(!isset($_SESSION['nome'])) {
     header('Location: ../403/');
@@ -18,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Exo:100" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="./../css/styles.css">
     <style type="text/css">
       body {
         font-family: 'Montserrat Alternates', sans-serif;
@@ -26,6 +27,10 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+      }
+      .produto {
+        word-wrap: break-word;
+        height: 500px;
       }
     </style>
     <title>Don Palermo</title>
@@ -57,80 +62,25 @@
         </nav>
         <!-- barra de navegação -->
 
-    <!-- lista de bebidas -->
-    <div class="row">
-      <div class="col-12">
-        <h1 id="TituloS2"><font color="white">Bebidas</font><h1>
-      </div>
+     <!-- lista de Bebidas -->
+     <div class="row">
+     <div class="col-12">
+       <h1 id="TituloS2"><font color="white">Bebidas</font><h1>
+     </div> 
 
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/bebidas/coca-cola.png" />
-        <h1>COCA COLA 2L</h1>
-        <p class="preco">R$11,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-      
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/bebidas/sprite.png" />
-        <h1>SPRITE 2L</h1>
-        <p class="preco">R$9,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-        
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/bebidas/guarana-antarctica.png" />
-        <h1>GUARANÁ 2L</h1>
-        <p class="preco">R$11,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
+   <?php foreach ($produtos as $produto) : ?>
+   <form  method="post" action="../php/cart/index.php?action=add&id=<?php echo($produto['id']); ?>">
+     <div class="col-md-4 text-center produto">
+       <img class="produto-img" src="<?php echo('../img/bebidas/'.$produto['imagem']); ?>" />
+       <h1><?php echo($produto['descricao']); ?></h1>
+       <p class="preco">R$ <?php echo($produto['preco']); ?></p>
+       <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
+     </div> 
+    </form>
+     <?php endforeach; ?>   
 
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/bebidas/pepsi.png" />
-        <h1>PEPSI 2L</h1>
-        <p class="preco">R$10,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-     </div>
-
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/bebidas/fanta-laranja.png" />
-        <h1>FANTA LARANJA 2L</h1>
-        <p class="preco">R$9,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-      
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/bebidas/fanta-uva.png" />
-        <h1>FANTA UVA 2L</h1>
-        <p class="preco">R$9,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-4 text-center produto">
-            <img class="produto-img" src="../img/bebidas/itubaina.png" />
-            <h1>ITUBAÍNA</h1>
-            <p class="preco">R$8,99</p>
-            <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-          </div>
-    
-          <div class="col-md-4 text-center produto">
-            <img class="produto-img" src="../img/bebidas/dolly-limao.png" />
-            <h1>DOLLY LIMÃO 2L</h1>
-            <p class="preco">R$7,99</p>
-            <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-          </div>
-              
-          <div class="col-md-4 text-center produto">
-            <img class="produto-img" src="../img/bebidas/dolly-cola.png" />
-            <h1>DOLLY COLA 2L</h1>
-            <p class="preco">R$7,99</p>
-            <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-          </div> 
-    </div>
-
-    <!-- lista de bebidas -->
-
+   </div>
+    <!-- lista de Bebidas -->
     
 	<!-- rodape -->
   <section class="footer">
