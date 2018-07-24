@@ -1,0 +1,130 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 25, 2018 at 01:16 AM
+-- Server version: 8.0.11
+-- PHP Version: 7.2.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_pizza`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `sobrenome` varchar(200) NOT NULL,
+  `telefone` varchar(15) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `cpf` varchar(11) NOT NULL,
+  `data_nascimento` varchar(10) NOT NULL,
+  `usuario` varchar(12) NOT NULL,
+  `senha` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `nome`, `sobrenome`, `telefone`, `email`, `cpf`, `data_nascimento`, `usuario`, `senha`) VALUES
+(12, 'alexandre', 'dos santos', '43354841', 'ale_santos.soares@hotmail.com', '43947111122', '2018-07-12', 'admin', '21232f297a57a5a743894a0e4a801fc3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produtos`
+--
+
+CREATE TABLE `produtos` (
+  `id` int(11) NOT NULL,
+  `descricao` varchar(100) NOT NULL,
+  `imagem` varchar(100) NOT NULL,
+  `preco` float NOT NULL,
+  `categoria` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `produtos`
+--
+
+INSERT INTO `produtos` (`id`, `descricao`, `imagem`, `preco`, `categoria`) VALUES
+(1, 'PEPPERONI', 'pepperoni.png', 29.99, 'PIZZA'),
+(2, 'MUSSARELA', 'mussarela.png', 19.99, 'PIZZA'),
+(3, 'CALABRESA', 'calabresa.png', 19.99, 'PIZZA'),
+(4, 'VEGANA', 'mussarela.png', 19.99, 'PIZZA'),
+(5, 'PORTUGUESA', 'portuguesa.png', 24.99, 'PIZZA'),
+(6, '4 QUEIJOS', 'quatro-queijo.png', 29.99, 'PIZZA'),
+(7, 'TOSCANA', 'toscana.png', 29.99, 'PIZZA'),
+(8, 'MARGHERITA', 'margherita.png', 29.99, 'PIZZA'),
+(9, 'CORN & BACON', 'corn-bacon.png', 34.99, 'PIZZA'),
+(10, 'FRANGO C CHEDDAR', 'frango-cheddar.png', 34.99, 'PIZZA'),
+(11, 'BACON', 'bacon.png', 29.99, 'PIZZA'),
+(12, 'CARNE SECA', 'carne-seca.png', 29.99, 'PIZZA'),
+(13, 'PALMITO', 'palmito.png', 24.99, 'PIZZA'),
+(14, 'VEGANA', 'vegana.png', 29.99, 'PIZZA'),
+(15, 'FRANGO C CATUPIRY', 'frango-catupiry.png', 34.99, 'PIZZA'),
+(16, 'ATUM', 'atum.png', 29.99, 'PIZZA'),
+(17, 'COCA COLA 2L', 'coca-cola.png', 11.99, 'BEBIDA'),
+(18, 'SPRITE 2L', 'sprite.png', 9.99, 'BEBIDA'),
+(19, 'GUARANÁ 2L', 'guarana-antarctica.png', 11.99, 'BEBIDA'),
+(20, 'PEPSI 2L', 'pepsi.png', 10.99, 'BEBIDA'),
+(21, 'FANTA LARANJA 2L', 'fanta-laranja.png', 9.99, 'BEBIDA'),
+(22, 'FANTA UVA 2L', 'fanta-uva.png', 9.99, 'BEBIDA'),
+(23, 'ITUBAÍNA 2L', 'itubaina.png', 8.99, 'BEBIDA'),
+(24, 'DOLLY LIMÃO 2L', 'dolly-limao.png', 7.99, 'BEBIDA'),
+(25, 'DOLLY COLA 2L', 'dolly-cola.png', 7.99, 'BEBIDA');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `produtos`
+--
+ALTER TABLE `produtos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `produtos`
+--
+ALTER TABLE `produtos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
