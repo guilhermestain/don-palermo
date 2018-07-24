@@ -39,15 +39,15 @@
     <!-- barra de navegação -->
 		<nav id="navbar1" class="navbar navbar-default">
       <div class="navbar-header">
-        <a href="../index.html" class="navbar-brand"><img id="logodp" src="../img/logo.png"></a>
-        <a href="../index.html" class="navbar-brand"><img id="pizza" src="../img/pizzaria.png"></a>
+        <a href="../area-cliente/index.php" class="navbar-brand"><img id="logodp" src="../img/logo.png"></a>
+        <a href="../area-cliente/index.php" class="navbar-brand"><img id="pizza" src="../img/pizzaria.png"></a>
         <button class="navbar-toggle glyphicon glyphicon-menu-hamburger" data-toggle="collapse" data-target="#barra"></button>
       </div>
 
       <ul id="barra" class="nav navbar-nav navbar-right navbar-collapse">
-        <li ><a href="../pizzas/index.html"  id="nome2"><font color="green">Pizzas</font></a></li>
-        <li ><a href="../bebidas/index.html" id="nome2"><font color="white">Bebidas</font></a></li>
-        <li ><a href="../pedidos/index.php" id="nome2" class="active"><font color="red">Pedidos</font></a></li>
+        <li ><a href="../area-cliente-pizzas/index.php"  id="nome2"><font color="green">Pizzas</font></a></li>
+        <li ><a href="../area-cliente-bebidas/index.php" id="nome2"><font color="white">Bebidas</font></a></li>
+        <li ><a href="./index.php" id="nome2" class="active"><font color="red">Pedidos</font></a></li>
         <li ><a href="../php/loggout/index.php" id="nome2"><font color="red">Sair</font></a></li>
       </ul>
       <p class="text-white">
@@ -69,35 +69,35 @@
 
     
 	<!-- rodape -->
-		<section class="footer">
-			<div class="row">
-				<div class="col-md-2">
-					<div class="link-area">
-						<h3><a href="../sobre/index.html" id="footertext"><font color="white">Pizzaria</a></font></h3>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="link-area">
-						<h3><a href="../pizzas/index.html" id="footertext"><font color="white">Cardápio</a></font></h3>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="link-area">
-						<h3><a href="../login/index.html" id="footertext"><font color="white">Cliente</a></font></h3>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div id="link-area1">
-						<h5><font color="white">Av. Pereira Barreto, 400 - Baeta Neves, SBC, 09751-000</font></h5>
-						<h5><font color="white">(11) 4002-8922 </font></h5>
-					</div>
-				</div>
-				<div class="row index-social-link text-center">
-					<p class="copy-c">Pizzaria © Don Palermo</p>
-				</div>
-			</div>
-		</section> 
-  <!-- rodape -->
+  <section class="footer">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="link-area">
+        <h3><a href="../area-cliente-pizzas/index.php" id="footertext"><font color="white">Cardápio</a></font></h3>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="link-area">
+        <!-- <h3><a href="../area-cliente-pizzas/index.php" id="footertext"><font color="white">Cardápio</a></font></h3> -->
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="link-area">
+        <!-- <h3><a href="../login/index.php" id="footertext"><font color="white">Cliente</a></font></h3> -->
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div id="link-area1">
+        <h5><font color="white">Av. Pereira Barreto, 400 - Baeta Neves, SBC, 09751-000</font></h5>
+        <h5><font color="white">(11) 4002-8922 </font></h5>
+      </div>
+    </div>
+    <div class="row index-social-link text-center">
+      <p class="copy-c">Pizzaria © Don Palermo</p>
+    </div>
+  </div>
+</section> 
+<!-- rodape -->
   
 	</div>
 </body>

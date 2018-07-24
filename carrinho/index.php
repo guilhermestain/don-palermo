@@ -61,7 +61,7 @@
 				</div>
 				<div class="col-md-2">
 					<div class="link-area">
-						<h3><a href="../login/index.html" id="footertext"><font color="white">Cliente</a></font></h3>
+						<h3><a href="../login/index.php" id="footertext"><font color="white">Cliente</a></font></h3>
 					</div>
 				</div>
 				<div class="col-md-6">

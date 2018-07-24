@@ -1,3 +1,13 @@
+<?php 
+  session_start();
+
+  if(isset($_SESSION['nome'])) {
+    header('Location: ../area-cliente/');
+  }
+
+?>
+
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -38,7 +48,7 @@
         <li ><a href="../index.html" id="nome1"><font color="green">Home</font></a></li>
         <li ><a href="../pizzas/index.html" id="nome2"><font color="green">Pizzas</font></a></li>
         <li ><a href="../bebidas/index.html" id="nome2"><font color="white">Bebidas</font></a></li>
-        <li ><a href="../login/index.html" id="nome2" class="active"><font color="red">Área do Cliente</font></a></li>
+        <li ><a href="../login/index.php" id="nome2" class="active"><font color="red">Área do Cliente</font></a></li>
         <li ><a href="../sobre/index.html" id="nome2"><font color="red">Sobre</font></a></li>
       </ul>
     </nav>
@@ -90,7 +100,7 @@
         
 				<div class="col-md-2">
 					<div class="link-area">
-						<h3><a href="../login/index.html" id="footertext"><font color="white">Cliente</a></font></h3>
+						<h3><a href="../login/index.php" id="footertext"><font color="white">Cliente</a></font></h3>
 					</div>
         </div>
         
