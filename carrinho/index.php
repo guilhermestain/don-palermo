@@ -44,6 +44,19 @@
       label {
         color: #fff;
       }
+
+      .input-qtd {
+        background: rgba(131, 131, 131, 0.342);
+        border: none;
+        width: 100px;
+        text-align: center;
+      }
+
+      .input-qtd:focus {
+        outline: none
+      }
+
+
     </style>
     <title>Don Palermo</title>
   </head>
@@ -51,9 +64,6 @@
 <body>
 
 	<div class="container">
-
- 
- 
 
       <!-- barra de navegação -->
       <nav id="navbar1" class="navbar navbar-default">
@@ -138,10 +148,10 @@
       </div>
 
 
-      <div class="col-md-12">
-        <br>
-        <hr>
         
+      <div class="col-md-12">
+      <br><br>
+        <h3 class="text-white">Dados do Pedido</h3>
       </div>
 
       <form action="" class="col-md-12 text-center">
@@ -160,27 +170,45 @@
             <tr>
               <th scope="col">Remover</th> 
               <th scope="row"><?php echo($produto['descricao']); ?></th>
-              <td class="text-center">1</td>
+              <td class="text-center" name="quantidade"><input class="input-qtd" type="number" value="1" min="1"></td>
               <td class="text-center">R$ <?php echo($produto['preco']); ?></td>
-              <td class="text-center">R$ 9.99</td>
+              <td class="text-center">R$  <?php echo($produto['preco'] * 1 ); ?></td>
             </tr>
             <?php endforeach; ?> 
           </tbody>
         </table>
       </form>
 
-      <div class="col-md-1"></div>
-      <div class="col-md-11">
+      <div class="col-md-12">
         <h2 class="text-white text-right">Total R$ 20,00</h2>
       </div>
 
-
-      <div class="col-md-8 mb-4"></div>
-      <div class="col-md-2 text-right mb-4">
-       <button class="btn btn-danger">Continuar Comprando</button>
+       
+      <div class="col-md-12">
+      <br>
+        <h3 class="text-white">Forma de Pagamento</h3>
       </div>
-      <div class="col-md-2 text-right mb-4">
-       <button class="btn btn-info">Finalizar Comprar</button>
+
+      <div class="col-md-2">
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+       Dinheiro
+        </label>
+        </div>
+        </div>
+        <div class="col-md-1">
+        <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+        Cartão 
+        </label>
+        </div>
+      </div>
+      <div class="col-9"></div>
+      <div class="col-md-12">
+      <br>
+        <button class="btn btn-danger">Finalizar Comprar</button>
       </div>
 
     </div>
