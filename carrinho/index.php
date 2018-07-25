@@ -1,32 +1,10 @@
 <?php 
   session_start();
-  require_once('../config/db.config.php');
+  require_once('../php/cart/index.php');
 
   if(!isset($_SESSION['nome'])) {
     header('Location: ../403/');
   }
-
-$dbConnection = new ConfigDb();
-$link = $dbConnection->connectDb();
-
-
-
-$cart = isset($_SESSION['shopping_cart']) 
-? array_filter($_SESSION['shopping_cart'], function($data) {
-  return $data > 0;
-  }) 
-: $_SESSION['shopping_cart'] = array();
-
-$cartFormat = "(".implode(',',$cart).")";
-
-$sql = "select * from produtos where id IN (".implode(',',$cart).")";
-
-$produtos = array();
-$result = mysqli_query($link, $sql);
-
-while($produto = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-  $produtos[] = $produto;
-}
 
 ?>
 
@@ -106,7 +84,9 @@ while($produto = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         <h1 id="TituloS2"><font color="white">Carrinho</font><h1>
       </div> 
       
-      <div class="col-md-12"><hr></div>
+      <div class="col-md-12">
+        <h3 class="text-white">Dados da entrega</h3>
+      </div>
 
       <div class="col-md-2">
         <div class="form-cadastro-input">
