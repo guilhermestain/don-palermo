@@ -185,7 +185,6 @@
 
        
       <div class="col-md-12">
-      <br>
         <h3 class="text-white">Forma de Pagamento</h3>
       </div>
 
