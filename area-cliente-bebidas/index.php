@@ -69,12 +69,12 @@
      </div> 
 
    <?php foreach ($produtos as $produto) : ?>
-   <form  method="post" action="../php/cart/index.php?action=add&id=<?php echo($produto['id']); ?>">
+   <form method="post" action="../php/cart/index.php?action=add&id=<?php echo($produto['id']); ?>">
      <div class="col-md-4 text-center produto">
        <img class="produto-img" src="<?php echo('../img/bebidas/'.$produto['imagem']); ?>" />
        <h1><?php echo($produto['descricao']); ?></h1>
        <p class="preco">R$ <?php echo($produto['preco']); ?></p>
-       <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
+       <button class="button-new-user" type="submit"> <img src="../img/bt-comprar.png"></button>
      </div> 
     </form>
      <?php endforeach; ?>   
