@@ -1,5 +1,6 @@
 <?php 
   session_start();
+  require_once('../php/products/pizza.php');
 
   if(!isset($_SESSION['nome'])) {
     header('Location: ../403/');
@@ -26,6 +27,11 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+      }
+
+      .produto {
+        word-wrap: break-word;
+        height: 500px;
       }
     </style>
     <title>Don Palermo</title>
@@ -62,112 +68,18 @@
     <div class="row">
       <div class="col-12">
         <h1 id="TituloS2"><font color="white">Pizzas</font><h1>
-      </div>
+      </div> 
 
+    <?php foreach ($produtos as $produto) : ?>
+    <form  method="post" action="../php/cart/index.php?action=add&id=<?php echo($produto['id']); ?>">
       <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/pepperoni.png" />
-        <h1>PEPPERONI</h1>
-        <p class="preco">R$29,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-      
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/mussarela.png" />
-        <h1>MUSSARELA</h1>
-        <p class="preco">R$19,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-        
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/calabresa.png" />
-        <h1>CALABRESA</h1>
-        <p class="preco">R$19,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/portuguesa.png" />
-        <h1>PORTUGUESA</h1>
-        <p class="preco">R$24,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-      
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/quatro-queijo.png" />
-        <h1>4 QUEIJOS</h1>
-        <p class="preco">R$29,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-          
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/toscana.png" />
-        <h1>TOSCANA</h1>
-        <p class="preco">R$29,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/margherita.png" />
-        <h1>MARGHERITA</h1>
-        <p class="preco">R$29,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-          
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/corn-bacon.png" />
-        <h1>CORN & BACON</h1>
-        <p class="preco">R$34,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-            
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/frango-cheddar.png" />
-        <h1>FRANGO C CHEDDAR</h1>
-        <p class="preco">R$34,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/bacon.png" />
-        <h1>BACON</h1>
-        <p class="preco">R$29,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-            
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/carne-seca.png" />
-        <h1>CARNE SECA</h1>
-        <p class="preco">R$29,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-        
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/palmito.png" />
-        <h1>PALMITO</h1>
-        <p class="preco">R$24,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/vegana.png" />
-        <h1>VEGANA</h1>
-        <p class="preco">R$29,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-              
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/frango-catupiry.png" />
-        <h1>FRANGO C CATUPIRY</h1>
-        <p class="preco">R$34,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
-        
-      <div class="col-md-4 text-center produto">
-        <img class="produto-img" src="../img/pizzas/atum.png" />
-        <h1>ATUM</h1>
-        <p class="preco">R$29,99</p>
-        <a href="../login/index.php"><img src="../img/bt-comprar.png"></a>
-      </div>
+        <img class="produto-img" src="<?php echo('../img/pizzas/'.$produto['imagem']); ?>" />
+        <h1><?php echo($produto['descricao']); ?></h1>
+        <p class="preco">R$ <?php echo($produto['preco']); ?></p>
+        <button class="button-new-user" type="submit"> <img src="../img/bt-comprar.png"></button>
+      </div> 
+    </form>
+    <?php endforeach; ?>   
 
     </div>
     <!-- lista de pizza -->
