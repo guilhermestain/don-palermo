@@ -47,6 +47,7 @@
         <li ><a href="../area-cliente-pizzas/index.php" id="nome2"><font color="green">Pizzas</font></a></li>
         <li ><a href="../area-cliente-bebidas/index.php" id="nome2"><font color="white">Bebidas</font></a></li>
         <li ><a href="../pedidos/index.php" id="nome2"><font color="red">Pedidos</font></a></li>
+        <li ><a href="../carrinho/index.php" id="nome2" ><font color="red">Carinho</font></a></li>
         <li ><a href="../php/loggout/index.php" id="nome2"><font color="red">Sair</font></a></li>
       </ul>
       <p class="text-white">
