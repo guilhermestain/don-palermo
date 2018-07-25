@@ -3,5 +3,6 @@
   unset($_SESSION['id']);
   unset($_SESSION['nome']);
   unset($_SESSION['email']);
+  unset($_SESSION['shopping_cart']);
   header('Location: ../../')
 ?>
