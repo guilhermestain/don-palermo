@@ -93,6 +93,8 @@
       <div class="col-12">
         <h1 id="TituloS2"><font color="white">Carrinho</font><h1>
       </div> 
+
+      <form method="post" action="../php/order/index.php">
       
       <div class="col-md-12">
         <h3 class="text-white">Dados da entrega</h3>
@@ -154,11 +156,12 @@
         <h3 class="text-white">Dados do Pedido</h3>
       </div>
 
-      <form action="" class="col-md-12 text-center">
+      <div class="col-md-12 text-center">
         <table class="table">
           <thead>
             <tr>
               <th scope="col"></th> 
+              <th scope="col">id</th>
               <th scope="col">Produto</th>
               <th class="text-center">Qtd.</th>
               <th class="text-center">Preço</th>
@@ -169,15 +172,16 @@
           <?php foreach ($produtos as $produto) : ?>
             <tr>
               <th scope="col">Remover</th> 
-              <th scope="row"><?php echo($produto['descricao']); ?></th>
-              <td class="text-center" name="quantidade"><input class="input-qtd" type="number" value="1" min="1"></td>
-              <td class="text-center">R$ <?php echo($produto['preco']); ?></td>
+              <th scope="row" name="id_produto"><?php echo($produto['id']); ?></th>
+              <th scope="row" ><?php echo($produto['descricao']); ?></th>
+              <td class="text-center"><input class="input-qtd" type="number" value="1" min="1" name="quantidade"></td>
+              <td class="text-center" name="preco">R$ <?php echo($produto['preco']); ?></td>
               <td class="text-center">R$  <?php echo($produto['preco'] * 1 ); ?></td>
             </tr>
             <?php endforeach; ?> 
           </tbody>
         </table>
-      </form>
+      </div>
 
       <div class="col-md-12">
         <h2 class="text-white text-right">Total R$  <?php echo(array_sum(array_column($produtos, 'preco'))); ?></h2>
@@ -205,12 +209,14 @@
         </div>
       </div>
       <div class="col-9"></div>
+  
       <div class="col-md-12">
       <br>
-        <button class="btn btn-danger">Finalizar Comprar</button>
+        <button class="btn btn-danger" type="submit">Finalizar Comprar</button>
       </div>
 
     </div>
+    </form>
     <!-- lista de pizza -->
 
     

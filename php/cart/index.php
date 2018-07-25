@@ -22,39 +22,6 @@ if(count($cart)) {
     $produtos[] = $produto;
   }
 }
-
-
-  // como criar filtros com php
-      // $numbers = array(1,2,3,4,5,6,7,8,25, 'alexandre');
-
-    // $more_than_four = array_filter($numbers, function($data) {
-    //   return $data >= 4;
-    // });
-
-    // $less_than_four = array_filter($numbers, function($data) {
-    //   return $data < 4;
-    // });
-
-    // $equal = array_filter($numbers, function($data) {
-    //   return $data === 'alexandre';
-    // });
-
-    // $equalTo = array_filter($numbers, function($data) {
-    //   return $data === 25;
-    // });
-
-
-
-    // print_r($more_than_four);
-    // echo '<br><br>';
-    // print_r($less_than_four);
-    // echo '<br><br>';
-    // print_r($equal);
-    // echo '<br><br>';
-    // print_r($equalTo);
-    // echo '<br><br>';
-    // print($produto_id);
-
 ?>
 
 
