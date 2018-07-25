@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2018 at 01:16 AM
+-- Generation Time: Jul 25, 2018 at 09:06 PM
 -- Server version: 8.0.11
 -- PHP Version: 7.2.5
 
@@ -40,12 +40,33 @@ CREATE TABLE `clientes` (
   `senha` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `clientes`
+-- Table structure for table `pedidos`
 --
 
-INSERT INTO `clientes` (`id`, `nome`, `sobrenome`, `telefone`, `email`, `cpf`, `data_nascimento`, `usuario`, `senha`) VALUES
-(12, 'alexandre', 'dos santos', '43354841', 'ale_santos.soares@hotmail.com', '43947111122', '2018-07-12', 'admin', '21232f297a57a5a743894a0e4a801fc3');
+CREATE TABLE `pedidos` (
+  `id` int(11) NOT NULL,
+  `id_cliente` int(11) NOT NULL,
+  `endereco` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `pagamento` varchar(32) NOT NULL,
+  `criado` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pedidos_itens`
+--
+
+CREATE TABLE `pedidos_itens` (
+  `id` int(11) NOT NULL,
+  `id_pedido` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  `quantidade` int(11) NOT NULL,
+  `preco` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -103,6 +124,18 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pedidos_itens`
+--
+ALTER TABLE `pedidos_itens`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `produtos`
 --
 ALTER TABLE `produtos`
@@ -116,7 +149,19 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `pedidos`
+--
+ALTER TABLE `pedidos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `pedidos_itens`
+--
+ALTER TABLE `pedidos_itens`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `produtos`
