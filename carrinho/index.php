@@ -180,7 +180,7 @@
       </form>
 
       <div class="col-md-12">
-        <h2 class="text-white text-right">Total R$ 20,00</h2>
+        <h2 class="text-white text-right">Total R$  <?php echo(array_sum(array_column($produtos, 'preco'))); ?></h2>
       </div>
 
        
@@ -190,7 +190,7 @@
 
       <div class="col-md-2">
         <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <input class="form-check-input" type="radio" name="pagamento" value="dinheiro">
         <label class="form-check-label" for="exampleRadios1">
        Dinheiro
         </label>
@@ -198,7 +198,7 @@
         </div>
         <div class="col-md-1">
         <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <input class="form-check-input" type="radio" name="pagamento" value="cartao">
         <label class="form-check-label" for="exampleRadios2">
         Cartão 
         </label>
