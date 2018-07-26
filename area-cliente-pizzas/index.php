@@ -6,6 +6,32 @@
     header('Location: ../403/');
   }
 
+    
+  $produto_id = isset($_GET['id']) ? $_GET['id'] : null;
+
+  if(isset($_SESSION['shopping_cart'])) {
+
+    if(count($_SESSION['shopping_cart']) === 0) {
+
+      array_push($_SESSION['shopping_cart'], $id = $produto_id);
+
+    }else {
+
+      $filterById = array_filter( $_SESSION['shopping_cart'], function($data) {
+        $id = isset($_GET['id']) ? $_GET['id'] : null;
+        return $data === $id;
+      });
+
+      if(!$filterById) {
+        array_push($_SESSION['shopping_cart'], $produto_id);
+      }
+    }
+
+  }else {
+    $_SESSION['shopping_cart'] = array();   
+    array_push($_SESSION['shopping_cart'], $produto_id);
+  }    
+
 ?>
 
 <html>
@@ -54,6 +80,7 @@
             <li ><a href="./index.php"  id="nome2" class="active"><font color="green">Pizzas</font></a></li>
             <li ><a href="../area-cliente-bebidas/index.php" id="nome2" ><font color="white">Bebidas</font></a></li>
             <li ><a href="../pedidos/index.php" id="nome2" ><font color="red">Pedidos</font></a></li>
+            <li ><a href="../carrinho/index.php" id="nome2" ><font color="red">Carinho</font></a></li>
             <li ><a href="../php/loggout/index.php" id="nome2"><font color="red">Sair</font></a></li>
           </ul>
           <p class="text-white">
@@ -71,7 +98,7 @@
       </div> 
 
     <?php foreach ($produtos as $produto) : ?>
-    <form  method="post" action="../php/cart/index.php?action=add&id=<?php echo($produto['id']); ?>">
+    <form  method="post" action="./index.php?action=add&id=<?php echo($produto['id']); ?>">
       <div class="col-md-4 text-center produto">
         <img class="produto-img" src="<?php echo('../img/pizzas/'.$produto['imagem']); ?>" />
         <h1><?php echo($produto['descricao']); ?></h1>

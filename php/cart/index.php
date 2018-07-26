@@ -1,24 +1,27 @@
 <?php
-  session_start();
+require_once('../config/db.config.php');
   
-  $produto_id = isset($_GET['id']) ? $_GET['id'] : null;
+$dbConnection = new ConfigDb();
+$link = $dbConnection->connectDb();
 
-  if(isset($_SESSION['shopping_cart'])) {
+$cart = isset($_SESSION['shopping_cart']) 
+? array_filter($_SESSION['shopping_cart'], function($data) {
+  return $data > 0;
+  }) 
+: $_SESSION['shopping_cart'] = array();
 
-    if(count($_SESSION['shopping_cart']) === 0) {
+$cartFormat = "(".implode(',',$cart).")";
 
-      array_push($_SESSION['shopping_cart'], $produto_id);
+$sql = "select * from produtos where id IN (".implode(',',$cart).")";
 
-    }else {
+$produtos = array();
+$result = mysqli_query($link, $sql);
 
-      array_push($_SESSION['shopping_cart'], $produto_id);
-
-    }
-
-  }else {
-
-    $_SESSION['shopping_cart'] = array();   
-
+if(count($cart)) {
+  while($produto = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+    $produtos[] = $produto;
   }
-  
+}
 ?>
+
+
