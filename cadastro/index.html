@@ -1,204 +1,254 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="icon" id="palermoicon" href="../img/icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Exo:100" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/cep/buscar-cep.js"></script>
-    <style type="text/css">
-      body {
-        font-family: 'Montserrat Alternates', sans-serif;
-        background-image: url("../css/fundo-cadastro.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-      }
-      button.button-new-user {
-        background: transparent;
-        border: none;
-        padding-top: 20px;
-      }
-    </style>
-    <title>Don Palermo</title>
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" id="palermoicon" href="../img/icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/cep/buscar-cep.js"></script>
+  <style type="text/css">
+    body {
+      font-family: 'Montserrat Alternates', sans-serif;
+      background-image: url("../css/fundo-cadastro.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    button.button-new-user {
+      background: transparent;
+      border: none;
+      padding-top: 20px;
+    }
+  </style>
+  <title>Don Palermo</title>
+</head>
 
 <body>
 
-	<div class="container">
+  <div class="container">
 
     <!-- barra de navegação -->
-		<nav id="navbar1" class="navbar navbar-default">
+    <nav id="navbar1" class="navbar navbar-default">
       <div class="navbar-header">
-        <a href="../index.html" class="navbar-brand"><img id="logodp" src="../img/logo.png"></a>
-        <a href="../index.html" class="navbar-brand"><img id="pizza" src="../img/pizzaria.png"></a>
+        <a href="../index.html" class="navbar-brand">
+          <img id="logodp" src="../img/logo.png">
+        </a>
+        <a href="../index.html" class="navbar-brand">
+          <img id="pizza" src="../img/pizzaria.png">
+        </a>
         <button class="navbar-toggle glyphicon glyphicon-menu-hamburger" data-toggle="collapse" data-target="#barra"></button>
       </div>
 
       <ul id="barra" class="nav navbar-nav navbar-right navbar-collapse">
-        <li ><a href="../index.html" id="nome1"><span class="text-green">Home</span></a></li>
-        <li ><a href="../pizzas/index.html" id="nome2"><span class="text-green">Pizzas</span></a></li>
-        <li ><a href="../bebidas/index.html" id="nome2"><span class="text-white">Bebidas</span></a></li>
-        <li ><a href="../login/index.php" id="nome2"><span class="text-red">Área do Cliente</span></a></li>
-        <li ><a href="../sobre/index.html" id="nome2"><span class="text-red">Sobre</span></a></li>
+        <li>
+          <a href="../index.html" id="nome1">
+            <span class="text-green">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="../pizzas/index.html" id="nome2">
+            <span class="text-green">Pizzas</span>
+          </a>
+        </li>
+        <li>
+          <a href="../bebidas/index.html" id="nome2">
+            <span class="text-white">Bebidas</span>
+          </a>
+        </li>
+        <li>
+          <a href="../login/index.php" id="nome2">
+            <span class="text-red">Área do Cliente</span>
+          </a>
+        </li>
+        <li>
+          <a href="../sobre/index.html" id="nome2">
+            <span class="text-red">Sobre</span>
+          </a>
+        </li>
       </ul>
     </nav>
     <!-- barra de navegação -->
 
-    	<!-- slide de promoções -->
-	<div id="myCarousel" class="carousel slide jumbotron">
+    <!-- slide de promoções -->
+    <div id="myCarousel" class="carousel slide jumbotron">
       <ol class="carousel-indicators">
         <li id="BC1" data-target="#myCarousel" data-slide-to="0"></li>
         <li id="BC2" data-target="#myCarousel" data-slide-to="1"></li>
         <li id="BC3" data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
-  
+
       <div class="carousel-inner">
-  
+
         <div class="item active">
           <img class="first-slide" src="../img/banner-1.jpg" alt="First slide">
         </div>
-  
-        <div class="item"><script src="../js/cadastro/salvar-cadastro.js"></script>
+
+        <div class="item">
+          <script src="../js/cadastro/salvar-cadastro.js"></script>
           <img class="second-slide" src="../img/banner-2.jpg" alt="First slide">
         </div>
-  
+
         <div class="item">
           <img class="third-slide" src="../img/banner-3.jpg" alt="First slide">
         </div>
-  
+
       </div>
-  
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="icon-prev"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="icon-next"></span></a>
+
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+      </a>
     </div>
     <!-- slide de promoções -->
 
 
-   <!-- compra conteudo -->
-   <form class="form-cadastro" novalidate method="post" action="../php/register/index.php">
-    <div class="row">
+    <!-- compra conteudo -->
+    <form class="form-cadastro" novalidate method="post" action="../php/register/index.php">
+      <div class="row">
 
-       <h1>
-        <span class="text-green">Cad</span><span class=text-white>as</span><span class="text-red">tro</span>
-      </h1>
+        <h1>
+          <span class="text-green">Cad</span>
+          <span class=text-white>as</span>
+          <span class="text-red">tro</span>
+        </h1>
 
-      <div class="col-md-6">
-        <div class="form-cadastro-input">
-          <label for="nome">Nome:</label>
-          <input type="text" value="" name="nome" id="nome" autocomplete="nome" placeholder="Digite seu nome">
+        <div class="col-md-6">
+          <div class="form-cadastro-input">
+            <label for="nome">Nome:</label>
+            <input type="text" value="" name="nome" id="nome" autocomplete="nome" placeholder="Digite seu nome">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-cadastro-input">
+            <label for="nome">Sobrenome:</label>
+            <input type="text" value="" name="sobrenome" id="sobrenome" autocomplete="sobrenome" placeholder="Digite seu sobrenome">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-cadastro-input">
+            <label for="nome">CPF:</label>
+            <input type="text" value="" name="cpf" id="cpf" autocomplete="cpf" placeholder="Digite o CPF">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-cadastro-input">
+            <label for="nome">Data De Nasc:</label>
+            <input type="date" value="" name="data_nascimento" id="data_nascimento" autocomplete="data-nascimento">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-cadastro-input">
+            <label for="nome">Telefone:</label>
+            <input type="text" value="" name="telefone" id="telefone" autocomplete="telefone" placeholder="Digite o telefone">
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <h2 class="text-white">Dados de login</h2>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-cadastro-input">
+            <label for="nome">Email:</label>
+            <input type="text" value="" name="email" id="email" autocomplete="email" placeholder="Digite o email">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-cadastro-input">
+            <label for="nome">Usuário:</label>
+            <input type="text" value="" name="username" id="username" autocomplete="username" placeholder="Digite o nome do usuário">
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="form-cadastro-input">
+            <label for="nome">Senha:</label>
+            <input type="password" value="" name="password" id="password" autocomplete="off" placeholder="*******">
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="form-cadastro-input">
+            <label for="nome">Confirmar senha:</label>
+            <input type="password" value="" name="password_2" id="password_2" autocomplete="off" placeholder="*******">
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="form-button text-right">
+            <button class="button-new-user" type="submit">
+              <img name="" id="btcad" src="../img/bt-confirmar.png">
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </form>
+    <!-- compra conteudo -->
+
+
+    <!-- rodape -->
+    <section class="footer">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="link-area">
+            <h3>
+              <a href="../sobre/index.html" id="footertext">
+                <font color="white">Pizzaria</a>
+              </font>
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="link-area">
+            <h3>
+              <a href="../pizzas/index.html" id="footertext">
+                <font color="white">Cardápio</a>
+              </font>
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="link-area">
+            <h3>
+              <a href="../login/index.php" id="footertext">
+                <font color="white">Cliente</a>
+              </font>
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="link-area1">
+            <h5>
+              <font color="white">Av. Pereira Barreto, 400 - Baeta Neves, SBC, 09751-000</font>
+            </h5>
+            <h5>
+              <font color="white">(11) 4002-8922 </font>
+            </h5>
+          </div>
+        </div>
+        <div class="row index-social-link text-center">
+          <p class="copy-c">Pizzaria © Don Palermo</p>
         </div>
       </div>
-
-      <div class="col-md-6">
-        <div class="form-cadastro-input">
-          <label for="nome">Sobrenome:</label>
-          <input type="text" value="" name="sobrenome" id="sobrenome" autocomplete="sobrenome" placeholder="Digite seu sobrenome">
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="form-cadastro-input">
-          <label for="nome">CPF:</label>
-          <input type="text" value="" name="cpf" id="cpf" autocomplete="cpf" placeholder="Digite o CPF">
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="form-cadastro-input">
-          <label for="nome">Data De Nasc:</label>
-          <input type="date" value="" name="data_nascimento" id="data_nascimento" autocomplete="data-nascimento">
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="form-cadastro-input">
-          <label for="nome">Telefone:</label>
-          <input type="text" value="" name="telefone" id="telefone" autocomplete="telefone" placeholder="Digite o telefone">
-        </div>
-      </div>
-
-    <div class="col-md-12">
-      <h2 class="text-white">Dados de login</h2>
-    </div>
-
-    <div class="col-md-4">
-      <div class="form-cadastro-input">
-        <label for="nome">Email:</label>
-        <input type="text" value="" name="email" id="email" autocomplete="email" placeholder="Digite o email">
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="form-cadastro-input">
-        <label for="nome">Usuário:</label>
-        <input type="text" value="" name="username" id="username" autocomplete="username" placeholder="Digite o nome do usuário">
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="form-cadastro-input">
-        <label for="nome">Senha:</label>
-        <input type="password" value="" name="password" id="password" autocomplete="off" placeholder="*******">
-      </div>
-    </div>
-
-    <div class="col-md-2">
-      <div class="form-cadastro-input">
-        <label for="nome">Confirmar senha:</label>
-        <input type="password" value="" name="password_2" id="password_2" autocomplete="off" placeholder="*******">
-      </div>
-    </div>
-
-    <div class="col-md-12" >
-      <div class="form-button text-right">
-        <button class="button-new-user" type="submit">
-          <img name="" id="btcad" src="../img/bt-confirmar.png">
-        </button> 
-      </div>
-    </div>
+    </section>
+    <!-- rodape -->
 
   </div>
- </form>
- <!-- compra conteudo -->
-
-    
-	<!-- rodape -->
-		<section class="footer">
-			<div class="row">
-				<div class="col-md-2">
-					<div class="link-area">
-						<h3><a href="../sobre/index.html" id="footertext"><font color="white">Pizzaria</a></font></h3>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="link-area">
-						<h3><a href="../pizzas/index.html" id="footertext"><font color="white">Cardápio</a></font></h3>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="link-area">
-						<h3><a href="../login/index.php" id="footertext"><font color="white">Cliente</a></font></h3>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div id="link-area1">
-						<h5><font color="white">Av. Pereira Barreto, 400 - Baeta Neves, SBC, 09751-000</font></h5>
-						<h5><font color="white">(11) 4002-8922 </font></h5>
-					</div>
-				</div>
-				<div class="row index-social-link text-center">
-					<p class="copy-c">Pizzaria © Don Palermo</p>
-				</div>
-			</div>
-		</section> 
-  <!-- rodape -->
-  
-	</div>
 </body>
+
 </html>
