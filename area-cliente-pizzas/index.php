@@ -117,17 +117,17 @@
   <div class="row">
     <div class="col-md-2">
       <div class="link-area">
-        <h3><a href="./index.php" id="footertext"><font color="white">Cardápio</a></font></h3>
+      <h3><a href="../area-cliente-pizzas/index.php" id="footertext"><font color="white">Pizzas</a></font></h3>
       </div>
     </div>
     <div class="col-md-2">
       <div class="link-area">
-        <!-- <h3><a href="../area-cliente-pizzas/index.php" id="footertext"><font color="white">Cardápio</a></font></h3> -->
+        <h3><a href="../area-cliente-bebidas/index.php" id="footertext"><font color="white">Bebidas</a></font></h3>
       </div>
     </div>
     <div class="col-md-2">
       <div class="link-area">
-        <!-- <h3><a href="../login/index.php" id="footertext"><font color="white">Cliente</a></font></h3> -->
+        <h3><a href="../pedidos/index.php" id="footertext"><font color="white">Pedidos</a></font></h3>
       </div>
     </div>
     <div class="col-md-6">
