@@ -4,7 +4,7 @@ class ConfigDb {
 
   private $host   = '127.0.0.1';
   private $user   = 'root';
-  private $pass   = '43690_Alexandre';
+  private $pass   = '';
   private $dbName = 'db_pizza';
 
   public function connectDb() {
