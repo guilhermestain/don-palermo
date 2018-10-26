@@ -16,7 +16,7 @@ Sistema de gerenciamento de pedido para pizzaria, via web.
 * jQuery
 * Maps (Google)
 
-## Authors
+## Autores
 
 * **Aureo** - *Documentação e Requisitos*
 * **Leonardo** - *Documentação e Requisitos*

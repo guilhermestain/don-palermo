@@ -1,3 +1,13 @@
+<?php 
+  session_start();
+
+  if(isset($_SESSION['nome'])) {
+    header('Location: ../area-cliente/');
+  }
+
+?>
+
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -38,7 +48,7 @@
         <li ><a href="../index.html" id="nome1"><font color="green">Home</font></a></li>
         <li ><a href="../pizzas/index.html" id="nome2"><font color="green">Pizzas</font></a></li>
         <li ><a href="../bebidas/index.html" id="nome2"><font color="white">Bebidas</font></a></li>
-        <li ><a href="../area-cliente/index.html" id="nome2" class="active"><font color="red">Área do Cliente</font></a></li>
+        <li ><a href="../login/index.php" id="nome2" class="active"><font color="red">Área do Cliente</font></a></li>
         <li ><a href="../sobre/index.html" id="nome2"><font color="red">Sobre</font></a></li>
       </ul>
     </nav>
@@ -48,7 +58,7 @@
     <div class="form-login-content">
       <h1><font color="Green">Area </font><font color=White>do </font><font color="Red">Cliente</font></h1>
     
-      <form action="">
+      <form action="../php/auth/index.php" method="post">
         
           <div class="form-login">
             <label for="username">Digite o seu usuário:</label>
@@ -57,14 +67,14 @@
 
           <div class="form-login">
             <label for="username">Digite sua senha:</label>
-            <input placeholder="Senha" name="password" type="password" />
+            <input placeholder="Senha" name="senha" type="password" />
             <a class="sub-title-form" href="../cadastro/index.html">Cadastrar-se</a>
           </div>
 
-          <div class="form-button">
-            <a href="Login.html">
-              <img id="btac" src="../img/bt-confirmar.png">
-            </a>  
+          <div class="form-button text-right">
+            <button class="button-new-user" type="submit">
+              <img name="" id="btcad" src="../img/bt-confirmar.png">
+            </button> 
           </div>
 
       </form>
@@ -90,7 +100,7 @@
         
 				<div class="col-md-2">
 					<div class="link-area">
-						<h3><a href="../area-cliente/index.html" id="footertext"><font color="white">Cliente</a></font></h3>
+						<h3><a href="../login/index.php" id="footertext"><font color="white">Cliente</a></font></h3>
 					</div>
         </div>
         
