@@ -46,8 +46,8 @@
 
       <ul id="barra" class="nav navbar-nav navbar-right navbar-collapse">
         <li ><a href="../index.html" id="nome1"><font color="green">Home</font></a></li>
-        <li ><a href="../pizzas/index.html" id="nome2"><font color="green">Pizzas</font></a></li>
-        <li ><a href="../bebidas/index.html" id="nome2"><font color="white">Bebidas</font></a></li>
+        <li ><a href="../pizzas/index.php" id="nome2"><font color="green">Pizzas</font></a></li>
+        <li ><a href="../bebidas/index.php" id="nome2"><font color="white">Bebidas</font></a></li>
         <li ><a href="../login/index.php" id="nome2" class="active"><font color="red">Área do Cliente</font></a></li>
         <li ><a href="../sobre/index.html" id="nome2"><font color="red">Sobre</font></a></li>
       </ul>
